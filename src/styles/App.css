@@ -1,0 +1,404 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #16213e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.navbar .items-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .space-x-4 {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #eaeaea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff4c60;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+  background-color: #ff4c60;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background-color: #ff6b81;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.teams-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.teams-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #eaeaea;
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.team-card {
+  background: #16213e;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.team-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ff4c60;
+}
+
+.team-card h3 {
+  color: #eaeaea;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.team-card p {
+  color: #a9a9a9;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.team-tasks {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #a9a9a9;
+}
+
+.team-tasks li {
+  margin-bottom: 0.5rem;
+}
+
+.tasks-list {
+  background: #1a1a2e;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.tasks-list h4 {
+  color: #eaeaea;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tasks-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks-list li {
+  color: #a9a9a9;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #2e2e4d;
+}
+
+.tasks-list li:last-child {
+  border-bottom: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #eaeaea;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.container h2 {
+  color: #eaeaea;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 500;
+  color: #eaeaea;
+}
+
+input, select {
+  padding: 0.75rem;
+  border: 1px solid #2e2e4d;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #2e2e4d;
+  border-radius: 8px;
+}
+
+.task-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.task-checkbox input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #ff4c60;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff6b81;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.team-grid-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 2rem 0;
+}
+
+.team-grid {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.team-card {
+  background: #16213e;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.3s;
+  display: inline-block;
+  min-width: 300px;
+  max-width: 300px;
+  vertical-align: top;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.team-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ff4c60;
+}
+
+.team-title {
+  color: #eaeaea;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.team-description {
+  color: #a9a9a9;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.team-tasks {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #a9a9a9;
+}
+
+.team-tasks li {
+  margin-bottom: 0.5rem;
+}
