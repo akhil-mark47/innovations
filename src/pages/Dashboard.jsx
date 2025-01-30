@@ -79,7 +79,7 @@ export default function Dashboard() {
             <option value="Creative Team">Creative Team</option>
             <option value="Logistics & Operations Team">Operations Team</option>
             <option value="Coordination Team">Coordination & Communication Team</option>
-            <option value="Approval & Faculty Team">Approval & Faculty Team</option>
+            <option value="Marketing Team">Marketing Team</option>
             <option value="Content Team">Content & Engagement Team</option>
             <option value="Tech Support Team">Tech Support Team</option>
           </select>
